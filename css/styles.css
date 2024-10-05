@@ -327,12 +327,7 @@ body {
   fill: #fff;
 }
 
-#swiper-slide1,
-#swiper-slide2,
-#swiper-slide3,
-#swiper-slide4,
-#swiper-slide5,
-#swiper-slide6 {
+.swiper-slide {
   background: #ffffff;
   border: 1px solid #2D3034;
 }
