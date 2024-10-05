@@ -1,0 +1,368 @@
+/* ______________________F O N T S_______________________ */
+
+/* #region FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* #endregion FONTS */
+
+
+
+
+/* #region */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --Black: #000;
+}
+
+.container {
+  max-width: 1260px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: #ededed;
+  font-family: "Roboto", system-ui;
+}
+
+ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* #endregion */
+
+
+
+
+/* _____________________hero______________________ */
+
+/* #region hero */
+
+.hero {
+  background-image: url(../img/back-hero.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 768px;
+}
+
+.hero .container {
+  min-height: 768px;
+}
+
+.hero .container .item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  min-height: 768px;
+}
+
+.hero .container .item .img {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: #D74C55;
+}
+
+.hero .container .item .img img {
+  width: 100%;
+}
+
+.hero .container .item h3 {
+  color: #D74C55;
+  font-size: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero .container .item h3 span {
+  font-size: 30px;
+}
+
+.hero .container .item h1 {
+  color: #fff;
+  font-size: 45px;
+}
+
+.hero .container .item h2 {
+  color: #fff;
+  font-size: 35px;
+}
+
+/* #endregion hero */
+
+
+
+/* _____________________skills______________________ */
+
+/* #region skills */
+
+.skills {
+  padding: 80px 0 100px 0;
+}
+
+.skills .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+.skills .item h2 {
+  font-size: 40px;
+  text-shadow: 0px 5px 7px #464646;
+}
+
+.skills .item .skill {
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  justify-content: center;
+}
+
+.skills .item .skill div {
+  width: 250px;
+  padding: 5px 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+/* #endregion skills */
+
+
+
+/* _____________________projects______________________ */
+
+/* #region projects */
+
+.projects {
+  margin-bottom: 100px;
+}
+
+.projects .item h2 {
+  font-size: 40px;
+  text-shadow: 0px 5px 7px #464646;
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.projects .item .project {
+  display: flex;
+  gap: 30px 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+.swiper {
+  max-width: 300px;
+  max-height: 400px;
+}
+
+.swiper-slide {
+  max-width: 300px;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.swiper-slide {
+  background-color: #fff;
+}
+
+.swiper {
+  margin: 0;
+}
+
+.swiper-slide .item {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.swiper-slide .item img {
+  width: 100%;
+}
+
+.swiper-slide .item h3 {
+  color: #2D3034;
+  font-size: 25px;
+}
+
+.swiper-slide .item div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.swiper-slide .item div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+}
+
+.swiper-slide .item div h5,
+.swiper-slide .item div p {
+  margin-left: auto;
+  margin-right: auto;
+  color: #2D3034;
+}
+
+.swiper-slide .item div p {
+  font-size: 15px;
+}
+
+.swiper-slide .item .github {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-size: 17px;
+  color: #2D3034;
+  font-weight: 700;
+  gap: 18px;
+  border: 2px solid #2D3034;
+  transition: all 0.4s;
+}
+
+.swiper-slide .item .github:hover {
+  background: #2D3034;
+  color: #fff;
+}
+
+.swiper-slide .item .github:hover svg path {
+  fill: #fff;
+}
+
+.swiper-slide .item .demo {
+  margin-left: auto;
+  margin-right: auto;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 30px;
+  font-size: 17px;
+  color: #B40712;
+  font-weight: 700;
+  gap: 18px;
+  border: 2px solid #B40712;
+  transition: all 0.4s;
+}
+
+.swiper-slide .item .demo:hover {
+  background: #B40712;
+  color: #fff;
+}
+
+.swiper-slide .item .demo:hover svg path {
+  fill: #fff;
+}
+
+
+@media (max-width: 850px) {
+
+
+}
+/* #endregion projects */
+
+
+
+/* _____________________footer______________________ */
+
+/* #region footer */
+
+footer {
+  gap: 35px;
+  display: flex;
+  padding: 30px 15px;
+  min-height: 200px;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2D3034;
+}
+
+footer h2 {
+  color: #fff;
+  font-size: 40px;
+}
+
+footer ul {
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/* #endregion footer */
