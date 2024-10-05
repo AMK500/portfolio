@@ -350,33 +350,29 @@ body {
 }
 
 .loading .a {
-  width: 100px;
-  height: 100px;
+  border: 10px solid #dc3545;
+  border-right-color: transparent;
+  width: 120px;
+  height: 120px;
   position: fixed;
 }
 
 .loading .b {
+  border: 10px solid #dc3545;
+  border-bottom-color: transparent;
   width: 80px;
   height: 80px;
   position: fixed;
 }
 
-.loading .c {
-  width: 60px;
-  height: 60px;
-  position: fixed;
-}
-
 .loading h1 {
-  padding-top: 180px;
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 200px;
   --bs-text-opacity: 1;
-  color: rgba(var(--bs-danger-rgb), var(--bs-text-opacity)) !important;
+  color: #dc3545;
 }
 
-@media (max-width: 850px) {
-
-
-}
 /* #endregion projects */
 
 
