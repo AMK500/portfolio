@@ -327,6 +327,30 @@ body {
   fill: #fff;
 }
 
+#swiper-slide1 {
+  background: #e1d2ff;
+}
+
+#swiper-slide2 {
+  background: #ffdede;
+}
+
+#swiper-slide3 {
+  background: #9dc59b;
+}
+
+#swiper-slide4 {
+  background: #fff2de;
+}
+
+#swiper-slide5 {
+  background: #b0ffaf;
+}
+
+#swiper-slide6 {
+  background: #ddc290;
+}
+
 
 @media (max-width: 850px) {
 
