@@ -327,28 +327,14 @@ body {
   fill: #fff;
 }
 
-#swiper-slide1 {
-  background: #e1d2ff;
-}
-
-#swiper-slide2 {
-  background: #ffdede;
-}
-
-#swiper-slide3 {
-  background: #9dc59b;
-}
-
-#swiper-slide4 {
-  background: #fff2de;
-}
-
-#swiper-slide5 {
-  background: #b0ffaf;
-}
-
+#swiper-slide1,
+#swiper-slide2,
+#swiper-slide3,
+#swiper-slide4,
+#swiper-slide5,
 #swiper-slide6 {
-  background: #ddc290;
+  background: #ffffff;
+  border: 1px solid #2D3034;
 }
 
 
