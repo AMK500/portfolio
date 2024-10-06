@@ -8,7 +8,6 @@
 
 
 
-
 /* #region */
 
 * {
@@ -46,7 +45,6 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
 }
 
 /* #endregion */
-
 
 
 
@@ -395,7 +393,7 @@ footer {
 
 footer h2 {
   color: #fff;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 footer ul {
@@ -404,6 +402,14 @@ footer ul {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+
+footer ul a svg path {
+  transition: all 0.3s;
+}
+
+footer ul a:hover svg path {
+  fill: #eb505a;
 }
 
 /* #endregion footer */
