@@ -206,14 +206,20 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 100px;
 }
 
-.projects .item h2 {
+.projects .items {
+  gap: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.projects .items h2 {
   font-size: 40px;
   text-shadow: 0px 5px 7px #464646;
   text-align: center;
   margin-bottom: 45px;
 }
 
-.projects .item .project-1 {
+.projects .items .project-1 {
   display: flex;
   gap: 30px 80px;
   flex-wrap: wrap;
@@ -227,6 +233,7 @@ body {
 }
 
 body {
+  background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
@@ -234,51 +241,55 @@ body {
   padding: 0;
 }
 
-.project-1 .swiper {
-  max-width: 300px;
-  max-height: 400px;
-  margin: 0;
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 40px;
 }
 
-.project-1 .swiper-slide {
-  max-width: 300px;
-  max-height: 400px;
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
-  align-items: center;
   justify-content: center;
-  border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #fff;
-  background-color: #fff;
-  border: 1px solid #2D3034;
+  align-items: center;
+  border-radius: 15px;
 }
 
-.project-1 .swiper-slide .item {
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects .item {
   padding: 15px;
   width: 100%;
   display: flex;
   flex-direction: column;
+  border-radius: 15px;
   gap: 20px;
   align-items: center;
 }
 
-.project-1 .swiper-slide .item img {
+.projects .item img {
   width: 100%;
 }
 
-.project-1 .swiper-slide .item h3 {
+.projects .item h3 {
   color: #2D3034;
   font-size: 25px;
 }
 
-.project-1 .swiper-slide .item div {
+.projects .item div {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.project-1 .swiper-slide .item div {
+.projects .item div {
   width: 100%;
   display: flex;
   align-items: center;
@@ -287,18 +298,18 @@ body {
   text-align: center;
 }
 
-.project-1 .swiper-slide .item div h5,
-.project-1 .swiper-slide .item div p {
+.projects .item div h5,
+.projects .item div p {
   margin-left: auto;
   margin-right: auto;
   color: #2D3034;
 }
 
-.project-1 .swiper-slide .item div p {
+.projects .item div p {
   font-size: 15px;
 }
 
-.project-1 .swiper-slide .item .github {
+.projects .item .github {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
@@ -315,16 +326,16 @@ body {
   transition: all 0.4s;
 }
 
-.project-1 .swiper-slide .item .github:hover {
+.projects .item .github:hover {
   background: #2D3034;
   color: #fff;
 }
 
-.project-1 .swiper-slide .item .github:hover svg path {
+.projects .item .github:hover svg path {
   fill: #fff;
 }
 
-.project-1 .swiper-slide .item .demo {
+.projects .item .demo {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
@@ -341,12 +352,12 @@ body {
   transition: all 0.4s;
 }
 
-.project-1 .swiper-slide .item .demo:hover {
+.projects .item .demo:hover {
   background: #B40712;
   color: #fff;
 }
 
-.project-1 .swiper-slide .item .demo:hover svg path {
+.projects .item .demo:hover svg path {
   fill: #fff;
 }
 
