@@ -44,6 +44,47 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 13;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #000000e1;
+  transition: all 0.3s;
+}
+
+.loading .a {
+  border: 10px solid #dc3545;
+  border-right-color: transparent;
+  width: 120px;
+  height: 120px;
+  position: fixed;
+}
+
+.loading .b {
+  border: 10px solid #dc3545;
+  border-bottom-color: transparent;
+  width: 80px;
+  height: 80px;
+  position: fixed;
+}
+
+.loading h1 {
+  font-size: 30px;
+  font-weight: 700;
+  padding-top: 200px;
+  --bs-text-opacity: 1;
+  color: #dc3545;
+}
+
 /* #endregion */
 
 
@@ -171,7 +212,7 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 45px;
 }
 
-.projects .item .project {
+.projects .item .project-1 {
   display: flex;
   gap: 30px 80px;
   flex-wrap: wrap;
@@ -192,26 +233,13 @@ body {
   padding: 0;
 }
 
-body {
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 0;
-  padding: 0;
-}
-
-html,
-body {
-  position: relative;
-  height: 100%;
-}
-
-.swiper {
+.project-1 .swiper {
   max-width: 300px;
   max-height: 400px;
+  margin: 0;
 }
 
-.swiper-slide {
+.project-1 .swiper-slide {
   max-width: 300px;
   max-height: 400px;
   display: flex;
@@ -221,17 +249,11 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-}
-
-.swiper-slide {
   background-color: #fff;
+  border: 1px solid #2D3034;
 }
 
-.swiper {
-  margin: 0;
-}
-
-.swiper-slide .item {
+.project-1 .swiper-slide .item {
   padding: 15px;
   width: 100%;
   display: flex;
@@ -240,22 +262,22 @@ body {
   align-items: center;
 }
 
-.swiper-slide .item img {
+.project-1 .swiper-slide .item img {
   width: 100%;
 }
 
-.swiper-slide .item h3 {
+.project-1 .swiper-slide .item h3 {
   color: #2D3034;
   font-size: 25px;
 }
 
-.swiper-slide .item div {
+.project-1 .swiper-slide .item div {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.swiper-slide .item div {
+.project-1 .swiper-slide .item div {
   width: 100%;
   display: flex;
   align-items: center;
@@ -264,18 +286,18 @@ body {
   text-align: center;
 }
 
-.swiper-slide .item div h5,
-.swiper-slide .item div p {
+.project-1 .swiper-slide .item div h5,
+.project-1 .swiper-slide .item div p {
   margin-left: auto;
   margin-right: auto;
   color: #2D3034;
 }
 
-.swiper-slide .item div p {
+.project-1 .swiper-slide .item div p {
   font-size: 15px;
 }
 
-.swiper-slide .item .github {
+.project-1 .swiper-slide .item .github {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
@@ -292,16 +314,16 @@ body {
   transition: all 0.4s;
 }
 
-.swiper-slide .item .github:hover {
+.project-1 .swiper-slide .item .github:hover {
   background: #2D3034;
   color: #fff;
 }
 
-.swiper-slide .item .github:hover svg path {
+.project-1 .swiper-slide .item .github:hover svg path {
   fill: #fff;
 }
 
-.swiper-slide .item .demo {
+.project-1 .swiper-slide .item .demo {
   margin-left: auto;
   margin-right: auto;
   width: 120px;
@@ -318,60 +340,16 @@ body {
   transition: all 0.4s;
 }
 
-.swiper-slide .item .demo:hover {
+.project-1 .swiper-slide .item .demo:hover {
   background: #B40712;
   color: #fff;
 }
 
-.swiper-slide .item .demo:hover svg path {
+.project-1 .swiper-slide .item .demo:hover svg path {
   fill: #fff;
 }
 
-.swiper-slide {
-  background: #ffffff;
-  border: 1px solid #2D3034;
-}
 
-.loading {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 13;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #000000e1;
-  transition: all 0.3s;
-}
-
-.loading .a {
-  border: 10px solid #dc3545;
-  border-right-color: transparent;
-  width: 120px;
-  height: 120px;
-  position: fixed;
-}
-
-.loading .b {
-  border: 10px solid #dc3545;
-  border-bottom-color: transparent;
-  width: 80px;
-  height: 80px;
-  position: fixed;
-}
-
-.loading h1 {
-  font-size: 30px;
-  font-weight: 700;
-  padding-top: 200px;
-  --bs-text-opacity: 1;
-  color: #dc3545;
-}
 
 /* #endregion projects */
 
