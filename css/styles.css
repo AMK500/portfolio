@@ -206,12 +206,6 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   margin-bottom: 100px;
 }
 
-.projects .items {
-  gap: 60px;
-  display: flex;
-  flex-direction: column;
-}
-
 .projects .items h2 {
   font-size: 40px;
   text-shadow: 0px 5px 7px #464646;
