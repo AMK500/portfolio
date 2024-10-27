@@ -34,11 +34,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  background-color: #ededed;
-  font-family: "Roboto", system-ui;
-}
-
 ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -123,7 +118,7 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
   border-radius: 50%;
   background-color: #D74C55;
   border: 1px solid #d74c55;
-  box-shadow: 0px 0px 40px 8px #d74c55;
+  box-shadow: 0px 0px 40px 8px #d74c559c;
 }
 
 .hero .container .item .img img {
@@ -173,7 +168,6 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
 
 .skills .item h2 {
   font-size: 40px;
-  text-shadow: 0px 5px 7px #464646;
 }
 
 .skills .item .skill {
@@ -208,7 +202,6 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
 
 .projects .items h2 {
   font-size: 40px;
-  text-shadow: 0px 5px 7px #464646;
   text-align: center;
   margin-bottom: 45px;
 }
@@ -366,23 +359,53 @@ body {
 /* #region footer */
 
 footer {
-  gap: 35px;
-  display: flex;
-  padding: 30px 15px;
-  min-height: 200px;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
   background-color: #2D3034;
 }
 
-footer h2 {
+footer .top-footer .item {
+  gap: 25px;
+  display: flex;
+  padding: 30px 15px;
+  min-height: 200px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer .top-footer .item h2 {
   color: #fff;
   font-size: 38px;
 }
 
-footer ul {
+footer .top-footer .item .languages {
+  display: flex;
+  gap: 15px;
+}
+
+footer .top-footer .item .languages a {
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+footer .top-footer .item .languages a:hover {
+  background-color: #fff;
+  color: #2D3034;
+}
+
+footer .top-footer .item .languages .active {
+  background-color: #fff;
+  color: #2D3034;
+}
+
+footer .top-footer .item ul {
   gap: 30px;
   display: flex;
   flex-wrap: wrap;
@@ -390,12 +413,32 @@ footer ul {
   justify-content: center;
 }
 
-footer ul a svg path {
+footer .top-footer .item ul a svg path {
   transition: all 0.3s;
 }
 
-footer ul a:hover svg path {
+footer .top-footer .item ul a:hover svg path {
   fill: #eb505a;
+}
+
+
+footer .bottom-footer .text {
+  height: 60px;
+  border-top: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .bottom-footer .text p {
+  color: #fff;
+  text-align: center;
+  font-size: 15px;
+}
+
+body {
+  background-color: #e5e5e5;
+  font-family: "Roboto", system-ui;
 }
 
 /* #endregion footer */
