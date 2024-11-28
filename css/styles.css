@@ -171,21 +171,30 @@ ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
 }
 
 .skills .item .skill {
-  flex-wrap: wrap;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 50px;
+  gap: 35px;
   justify-content: center;
 }
 
-.skills .item .skill div {
-  width: 250px;
-  padding: 5px 10px;
+.skills .item .skill div a {
+  width: 260px;
+  height: 75px;
+  padding: 0 15px;
   background-color: #fff;
+  border: 2px solid #fff;
+  color: #000;
   border-radius: 10px;
   display: flex;
   align-items: center;
+  transition: all 0.3s;
   gap: 25px;
+}
+
+.skills .item .skill div a:hover {
+  background-color: transparent;
+  border: 2px solid #000;
 }
 
 /* #endregion skills */
