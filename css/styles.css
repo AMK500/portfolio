@@ -1,0 +1,191 @@
+/* ______________________F O N T S_______________________ */
+
+/* #region FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* #endregion FONTS */
+
+
+
+/* #region */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1300px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", serif;
+}
+
+body {
+  font-family: "Montserrat", serif;
+  position: relative;
+  z-index: -3;
+  background-image: url(../img/H.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+/* #endregion */
+
+
+
+
+/* ____________________header_____________________ */
+
+/* #region header */
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99999;
+  border-bottom: 1px solid #a3a3a3;
+  padding: 0 5px;
+}
+
+header .row {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .row .nem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  padding: 0;
+}
+
+header .row .nem a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0d6efd;
+  transition: all 0.3s;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+header .row .nem span {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+header .row .nem a:hover {
+  color: #000;
+}
+
+header .row .nem a svg path {
+  fill: #0d6efd;
+  transition: all 0.3s;
+}
+
+header .row .nem a:hover svg path {
+  fill: #000;
+}
+
+header .logo img {
+  width: 80%;
+}
+
+header .row nav {
+  width: auto;
+}
+
+header .row nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+header .row nav ul a {
+  color: #000;
+  font-weight: 600;
+}
+
+header .row nav ul .active {
+  color: #0B2B67;
+}
+
+.btn-primary {
+  width: auto;
+}
+
+header .row .offcanvas-body nav {
+  display: block;
+}
+
+header .row .offcanvas-body nav ul {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  height: 60px;
+}
+
+.offcanvas-header .btn-close {
+  padding: 0;
+  margin: 0;
+}
+
+:not(.btn-check) + .btn:active,
+.offcanvas-header .btn-close,
+.btn-primary,
+.btn-primary:active,
+.btn-primary:hover,
+.btn-primary:active, 
+.btn:active {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.offcanvas {
+  max-width: 300px;
+}
+
+.btn-primary {
+  display: none;
+  padding: 0;
+}
+
+@media (max-width: 715px) {
+
+  .btn-primary {
+    display: block;
+  }
+
+  header .row nav {
+    display: none;
+  }
+}
+
+/* #endregion header */
+
