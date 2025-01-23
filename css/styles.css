@@ -165,6 +165,7 @@ header .row .offcanvas-body nav ul {
   background: transparent;
   box-shadow: none;
   border: none;
+  display: flex;
 }
 
 .offcanvas {
