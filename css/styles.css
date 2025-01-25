@@ -187,11 +187,6 @@ header .row .offcanvas-body nav ul {
   display: flex;
   width: auto;
   padding: 0;
-  position: fixed;
-  top: 48%;
-  left: -10px;
-  z-index: 999;
-  transform: rotate(90deg);
 }
 
 .darkmode input {
@@ -200,7 +195,7 @@ header .row .offcanvas-body nav ul {
 
 .darkmode label {
   width: 70px;
-  height: 35px;
+  height: 30px;
   border-radius: 999px;
   background: #b4b4b4;
   position: relative;
@@ -210,23 +205,23 @@ header .row .offcanvas-body nav ul {
 }
 
 .darkmode label:hover .circle {
-  --circle-width: 35px;
+  --circle-width: 31px;
   border-radius: 999px;
 }
 
 .darkmode .circle {
-  --circle-width: 28px;
+  --circle-width: 26px;
   position: absolute;
   width: var(--circle-width);
-  height: 28px;
+  height: 26px;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   top: 50%;
-  left: 4px;
-  transform: translateY(-51%);
+  left: 2px;
+  transform: translateY(-50%);
   transition: all 0.4s;
   overflow: hidden;
 }
@@ -239,13 +234,12 @@ header .row .offcanvas-body nav ul {
 
 .darkmode .sun {
   color: #ffd900;
-  margin-left: -200%;
+  margin-top: -200%;
 }
 
 .darkmode .moon {
-  margin-left: 0%;
+  margin-top: 0%;
   color: #313131;
-  transform: rotate(-90deg);
 }
 
 .darkmode input[type=checkbox]:checked + label {
@@ -255,23 +249,23 @@ header .row .offcanvas-body nav ul {
 
 .darkmode input[type=checkbox]:checked + label .circle {
   background: #3f3f3f;
-  left: calc(100% - var(--circle-width) - 4px);
+  left: calc(100% - var(--circle-width) - 2px);
   box-shadow: 0px 0px 4px rgb(0 0 0 / 27%), 0px 0px 13px rgb(0 0 0 / 47%) inset;
 }
 
 .darkmode input[type=checkbox]:checked + label .circle .moon {
-  margin-left: 200%;
+  margin-top: 200%;
 }
 
 .darkmode input[type=checkbox]:checked + label .circle .sun {
-  margin-left: 0%;
+  margin-top: 0%;
 }
 
 .btn-primary svg {
   fill: var(--svg-menu);
 }
 
-@media (max-width: 720px) {
+@media (max-width: 600px) {
   
   .btn-primary {
     display: block;
