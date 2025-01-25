@@ -1,28 +1,16 @@
 
-const spinnerWrapperEl = document.querySelector('.loading')
-setTimeout(() => {
-  spinnerWrapperEl.style.display= 'none';
-}, 1000);
 
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  breakpoints: {
-    640: {
-      slidesPerView: 2,
-      spaceBetween: 20,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 40,
-    },
-    1024: {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
-  },
+const checkbox = document.getElementById('toggle');
+
+console.log(checkbox);
+
+// استعادة الحالة من localStorage عند تحميل الصفحة
+window.addEventListener('load', () => {
+  const isChecked = localStorage.getItem('toggle') === 'true';
+  checkbox.checked = isChecked;
+});
+
+// حفظ الحالة في localStorage عند تغييرها
+checkbox.addEventListener('change', () => {
+  localStorage.setItem('toggle', checkbox.checked);
 });
