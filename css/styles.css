@@ -39,6 +39,8 @@ body {
   --text-white: #fff;
   --svg-menu: #000;
   --clr-githup: #313131;
+  --card-poro: #fff;
+  --back-header: #fff;
 }
 
 /* #endregion */
@@ -51,8 +53,11 @@ body {
 
 header {
   width: 100%;
-  border-bottom: 1px solid #a3a3a3;
   padding: 0 15px;
+  background-color: var(--back-header);
+  position: fixed;
+  top: 0;
+  z-index: 99999;
 }
 
 header .row {
@@ -183,8 +188,10 @@ header .row .offcanvas-body nav ul {
   width: auto;
   padding: 0;
   position: fixed;
-  left: 15px;
-  bottom: 15px;
+  top: 48%;
+  left: -10px;
+  z-index: 999;
+  transform: rotate(90deg);
 }
 
 .darkmode input {
@@ -232,12 +239,13 @@ header .row .offcanvas-body nav ul {
 
 .darkmode .sun {
   color: #ffd900;
-  margin-top: -200%;
+  margin-left: -200%;
 }
 
 .darkmode .moon {
-  margin-top: 0%;
+  margin-left: 0%;
   color: #313131;
+  transform: rotate(-90deg);
 }
 
 .darkmode input[type=checkbox]:checked + label {
@@ -252,11 +260,11 @@ header .row .offcanvas-body nav ul {
 }
 
 .darkmode input[type=checkbox]:checked + label .circle .moon {
-  margin-top: 200px;
+  margin-left: 200%;
 }
 
 .darkmode input[type=checkbox]:checked + label .circle .sun {
-  margin-top: 0%;
+  margin-left: 0%;
 }
 
 .btn-primary svg {
@@ -287,6 +295,8 @@ body:has(.darkmode input[type=checkbox]:checked) {
   --svg-menu: #fff;
   --text-white: #313131;
   --clr-githup: #fff;
+  --card-poro: #4a4a4a;
+  --back-header: #272727;
 }
 
 
@@ -296,7 +306,7 @@ body:has(.darkmode input[type=checkbox]:checked) {
 /* #region HERO */
 
 .hero {
-  padding: 50px 15px 0 15px;
+  padding: 120px 15px 0 15px;
 }
 
 .hero .row {
@@ -398,7 +408,7 @@ body:has(.darkmode input[type=checkbox]:checked) {
 /* #region SKILLS */
 
 .skills {
-  padding: 200px 15px 0 15px;
+  padding: 150px 15px 0 15px;
 }
 
 .skills .text {
@@ -426,20 +436,118 @@ body:has(.darkmode input[type=checkbox]:checked) {
   fill: var(--clr-githup);
 }
 
-@media (max-width: 845px) {
-
-
-
-}
-
 /* #endregion SKILLS */
 
 
 
-/* _______________HERO________________ */
+/* _____________PROJECTS______________ */
 
-/* #region HERO */
+/* #region PROJECTS */
 
+.projects {
+  padding: 150px 15px 150px 15px;
+}
+
+.projects .text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 30px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+.swiper-slide {
+  background: #4a4a4a;
+  background: var(--card-poro);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 15px;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.swiper-slide .text-poro {
+  padding: 18px;
+  padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.swiper-slide .link {
+  padding: 18px;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.swiper-slide .link a {
+  color: var(--text-black);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: revert;
+  font-size: 17px;
+}
+
+.swiper-slide .link a svg path {
+  stroke: var(--clr-githup);
+}
+
+.swiper-slide .link a .git path {
+  fill: var(--clr-githup);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #7578f6;
+  width: 12px;
+  height: 12px;
+  opacity: 0.7;
+}
 
 @media (max-width: 845px) {
 
@@ -447,19 +555,58 @@ body:has(.darkmode input[type=checkbox]:checked) {
 
 }
 
-/* #endregion HERO */
+/* #endregion PROJECTS */
 
 
 
-/* _______________HERO________________ */
+/* ______________FOOTER_______________ */
 
-/* #region HERO */
+/* #region FOOTER */
 
+footer {
+  padding: 20px 15px;
+  background: var(--back-header);
+}
 
-@media (max-width: 845px) {
+footer .row {
+  justify-content: space-between;
+  align-items: center;
+}
 
+footer .row p {
+  width: auto;
+  padding: 0;
+}
 
+footer .row ul {
+  width: auto;
+  display: flex;
+  gap: 16px;
+  padding: 0;
+}
+
+footer .row ul svg {
+  width: 30px;
+  height: 30px;
+}
+
+footer .row ul svg path {
+  fill: var(--clr-githup);
+}
+
+@media (max-width: 595px) {
+
+  footer .row {
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+
+  footer .row p {
+    text-align: center;
+  }
 
 }
 
-/* #endregion HERO */
+/* #endregion FOOTER */
