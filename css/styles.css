@@ -478,6 +478,10 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: all 0.3s;
+}
+.swiper-slide img:hover {
+  transform: scale(1.07);
 }
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
@@ -494,6 +498,8 @@ body {
   border-radius: 15px;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+  z-index: 1;
 }
 
 .swiper-slide .text-poro {
