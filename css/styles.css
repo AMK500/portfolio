@@ -73,6 +73,7 @@ header .row .nem {
   gap: 6px;
   width: auto;
   padding: 0;
+  color: var(--text-black);
 }
 
 header .row .nem a {
