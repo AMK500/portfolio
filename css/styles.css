@@ -440,7 +440,7 @@ body:has(.darkmode input[type=checkbox]:checked) {
 /* #region PROJECTS */
 
 .projects {
-  padding: 150px 15px 150px 15px;
+  padding: 100px 15px;
 }
 
 .projects .text {
@@ -502,6 +502,10 @@ body {
   display: flex;
   flex-direction: column;
   gap: 15px;
+}
+
+.swiper-slide .text-poro p {
+  font-size: 15px;
 }
 
 .swiper-slide .link {
