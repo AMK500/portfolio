@@ -492,14 +492,12 @@ body {
   overflow: hidden;
   border-radius: 15px;
   flex-direction: column;
-  gap: 20px;
   position: relative;
   z-index: 1;
 }
 
 .swiper-slide .text-poro {
-  padding: 18px;
-  padding-bottom: 0;
+  padding: 5px 18px 25px 18px;
   text-align: center;
   display: flex;
   flex-direction: column;
