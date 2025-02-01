@@ -4,9 +4,6 @@
   box-sizing: border-box;
 }
 
-
-
-
 /* #region */
 
 .container {
@@ -23,7 +20,17 @@ a {
   text-decoration: none;
 }
 
-ul, li, a, p, span, h1, h2, h3, h4, h5, h6 {
+ul,
+li,
+a,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", serif;
@@ -45,10 +52,7 @@ body {
 
 /* #endregion */
 
-
-
 /* ______________HEADER_______________ */
-
 /* #region HEADER */
 
 header {
@@ -118,7 +122,7 @@ header .row .nem a .svg svg {
 
 header .row .nem a:hover .svg svg {
   left: -22px;
-  transition: all .4s;
+  transition: all 0.4s;
 }
 
 header .logo img {
@@ -176,7 +180,7 @@ header .row .offcanvas-body nav ul {
 .btn-primary,
 .btn-primary:active,
 .btn-primary:hover,
-.btn-primary:active, 
+.btn-primary:active,
 .btn:active {
   background: transparent;
   box-shadow: none;
@@ -262,22 +266,22 @@ header .row .offcanvas-body nav ul {
   color: #313131;
 }
 
-.darkmode input[type=checkbox]:checked + label {
+.darkmode input[type="checkbox"]:checked + label {
   background: #1f1f1f;
   box-shadow: 0px 0px 10px 4px #161616 inset;
 }
 
-.darkmode input[type=checkbox]:checked + label .circle {
+.darkmode input[type="checkbox"]:checked + label .circle {
   background: #3f3f3f;
   left: calc(100% - var(--circle-width) - 2px);
   box-shadow: 0px 0px 4px rgb(0 0 0 / 27%), 0px 0px 13px rgb(0 0 0 / 47%) inset;
 }
 
-.darkmode input[type=checkbox]:checked + label .circle .moon {
+.darkmode input[type="checkbox"]:checked + label .circle .moon {
   margin-top: 200%;
 }
 
-.darkmode input[type=checkbox]:checked + label .circle .sun {
+.darkmode input[type="checkbox"]:checked + label .circle .sun {
   margin-top: 0%;
 }
 
@@ -286,11 +290,10 @@ header .row .offcanvas-body nav ul {
 }
 
 @media (max-width: 600px) {
-  
   .btn-primary {
     display: block;
   }
-  
+
   header .row nav {
     display: none;
   }
@@ -302,7 +305,7 @@ header .row .offcanvas-body nav ul {
 
 /* #endregion HEADER */
 
-body:has(.darkmode input[type=checkbox]:checked) {
+body:has(.darkmode input[type="checkbox"]:checked) {
   background-color: #313131;
   color: #fff;
   --text-black: #fff;
@@ -313,34 +316,113 @@ body:has(.darkmode input[type=checkbox]:checked) {
   --back-header: #272727;
 }
 
-
-
 /* _______________HERO________________ */
-
 /* #region HERO */
 
 .hero {
-  padding: 120px 15px 0 15px;
+  padding: 0 15px 0 15px;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 
 .hero .row {
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+  gap: 90px;
 }
 
-.hero .col-auto {
-  padding: 0;
-  width: 100%;
-  max-width: 504px;
+.hero .card {
+  background: var(--card-poro);
+  position: relative;
+  /* z-index: -2; */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  border: 0;
+  width: 100%;
+  max-width: 350px;
   gap: 30px;
+  padding: 30px 10px;
+  border-radius: 15px;
 }
 
-.hero h1 span {
-  width: 400px;
-  background-image: linear-gradient(173deg,   #258080 40%, #226999, transparent );
+.hero .card::after,
+.hero .card::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 10%,
+    #226999,
+    #258080,
+    #258080
+  );
+  z-index: -3;
+  border-radius: 18px;
+  animation: 3s spin
+    linear(
+      0 0%,
+      0 2.27%,
+      0.02 4.53%,
+      0.04 6.8%,
+      0.06 9.07%,
+      0.1 11.33%,
+      0.14 13.6%,
+      0.25 18.15%,
+      0.39 22.7%,
+      0.56 27.25%,
+      0.77 31.8%,
+      1 36.35%,
+      0.89 40.9%,
+      0.85 43.18%,
+      0.81 45.45%,
+      0.79 47.72%,
+      0.77 50%,
+      0.75 52.27%,
+      0.75 54.55%,
+      0.75 56.82%,
+      0.77 59.1%,
+      0.79 61.38%,
+      0.81 63.65%,
+      0.85 65.93%,
+      0.89 68.2%,
+      1 72.7%,
+      0.97 74.98%,
+      0.95 77.25%,
+      0.94 79.53%,
+      0.94 81.8%,
+      0.94 84.08%,
+      0.95 86.35%,
+      0.97 88.63%,
+      1 90.9%,
+      0.99 93.18%,
+      0.98 95.45%,
+      0.99 97.73%,
+      1 100%
+    )
+    infinite;
+}
+
+.hero .card::before {
+  filter: blur(1rem);
+  opacity: 0.7;
+}
+
+.hero h3 {
+  text-align: center;
+  color: var(--text-black);
+}
+
+.hero p {
+  width: 500px;
+}
+
+.hero h3 span {
+  background-image: linear-gradient(173deg, #258080 40%, #226999, transparent);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -351,8 +433,9 @@ body:has(.darkmode input[type=checkbox]:checked) {
   inherits: false;
 }
 
-.hero .img {
-  width: 280px;
+.hero img {
+  width: 100%;
+  max-width: 250px;
   height: auto;
   border-radius: 50%;
   padding: 0;
@@ -363,41 +446,6 @@ body:has(.darkmode input[type=checkbox]:checked) {
   position: relative;
 }
 
-.hero .img .radius {
-  width: 280px;
-  height: auto;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero .img img {
-  width: 100%;
-}
-
-.hero .img::after,
-.hero .img::before {
-  content: "";
-  position: absolute;
-  height: calc(100% + 10px);
-  width: calc(100% + 10px);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-image: conic-gradient(from var(--angle), transparent 10%, #226999,  #258080, #258080);
-  z-index: -1;
-  border-radius: 50%;
-  animation: 4s spin cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
-  
-}
-
-.hero .img::before {
-  filter: blur(1rem);
-  opacity: 0.7;
-}
-
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -405,21 +453,24 @@ body:has(.darkmode input[type=checkbox]:checked) {
   }
 }
 
-@media (max-width: 845px) {
+.hero ul {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-  .hero .row {
-    justify-content: center;
-    text-align: center;
-  }
+.hero ul li {
+  font-size: 18px;
+}
 
+.hero ul span {
+  margin: 0 8px;
 }
 
 /* #endregion HERO */
 
-
-
 /* ______________SKILLS_______________ */
-
 /* #region SKILLS */
 
 .skills {
@@ -453,10 +504,7 @@ body:has(.darkmode input[type=checkbox]:checked) {
 
 /* #endregion SKILLS */
 
-
-
 /* _____________PROJECTS______________ */
-
 /* #region PROJECTS */
 
 .projects {
@@ -499,7 +547,8 @@ body {
   transform: scale(1.07);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0;
 }
 
@@ -553,14 +602,17 @@ body {
   fill: var(--clr-githup);
 }
 
-.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
 }
 
-.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0;
   padding: 0;
 }
@@ -593,17 +645,11 @@ body {
 }
 
 @media (max-width: 845px) {
-
-
-
 }
 
 /* #endregion PROJECTS */
 
-
-
 /* ______________FOOTER_______________ */
-
 /* #region FOOTER */
 
 footer {
@@ -638,7 +684,6 @@ footer .row ul svg path {
 }
 
 @media (max-width: 595px) {
-
   footer .row {
     justify-content: center;
     flex-direction: column;
@@ -649,7 +694,6 @@ footer .row ul svg path {
   footer .row p {
     text-align: center;
   }
-
 }
 
 /* #endregion FOOTER */
