@@ -72,7 +72,7 @@ header {
 
 header .container {
   border-radius: 15px;
-  background-color: var(--back-header);
+  background-color: var(--text-white);
 }
 
 header .row {
@@ -469,7 +469,7 @@ header .row .offcanvas-body nav ul {
 
 .skills {
   padding: 150px 15px 0 15px;
-  background-color: var(--text-white);
+  background-color: var(--back-header);
 }
 
 .skills .text {
@@ -504,7 +504,7 @@ header .row .offcanvas-body nav ul {
 
 .projects {
   padding: 100px 15px;
-  background-color: var(--text-white);
+  background-color: var(--back-header);
 }
 
 .projects .text {
@@ -546,7 +546,7 @@ body {
 
 .swiper-slide {
   background: #4a4a4a;
-  background: var(--card-poro);
+  background: var(--text-white);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -646,7 +646,7 @@ body {
 
 footer {
   padding: 20px 15px;
-  background: var(--back-header);
+  background: var(--text-white);
 }
 
 footer .row {
