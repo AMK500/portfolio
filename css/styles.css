@@ -675,7 +675,7 @@ footer .row ul svg path {
   fill: var(--clr-githup);
 }
 
-@media (max-width: 595px) {
+@media (max-width: 635px) {
   footer .row {
     justify-content: center;
     flex-direction: column;
