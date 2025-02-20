@@ -379,7 +379,6 @@ header .row .offcanvas-body nav ul {
     from var(--angle),
     transparent 10%,
     #226999,
-    #258080,
     #258080
   );
   z-index: -3;
