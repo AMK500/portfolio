@@ -1,3 +1,20 @@
+/* import-css */
+/* #region import */
+
+/* Fonts-Css */
+@import url(./bootstrap.css);
+
+/* Fonts-Css */
+@import url(https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css);
+
+/* Fonts-Css */
+@import url(https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
+
+/* Grid-System */
+@import url(https://unpkg.com/aos@2.3.1/dist/aos.css);
+
+/* #endregion import */
+
 * {
   padding: 0;
   margin: 0;
@@ -195,11 +212,6 @@ header .row nav ul .active {
   box-shadow: 0px 0px 20px #0000009e inset;
 }
 
-.darkmode label:hover .circle {
-  --circle-width: 31px;
-  border-radius: 999px;
-}
-
 .darkmode .circle {
   --circle-width: 26px;
   position: absolute;
@@ -252,141 +264,7 @@ header .row nav ul .active {
   margin-top: 0%;
 }
 
-header .row .ris {
-  display: none;
-}
-
-header .row .ris input {
-  display: none;
-}
-
-header .row .ris .back {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #00000057;
-  opacity: 0;
-  cursor: pointer;
-  visibility: hidden;
-  transition: all 0.4s;
-}
-
-header .row .ris input:checked ~ .back {
-  opacity: 1;
-  visibility: visible;
-}
-
-header .row .ris .header-ris {
-  background: var(--back-header);
-  width: 260px;
-  height: 100%;
-  position: fixed;
-  right: -260px;
-  transition: all 0.4s;
-  top: 0;
-  z-index: 9999999;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-header .row .ris .a svg path {
-  fill: var(--clr-githup);
-}
-
-header .row .ris .header-ris .head {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-header .row .ris .header-ris hr {
-  margin: 0 auto;
-  width: 88%;
-  height: 2px;
-}
-
-header .row .ris .header-ris .head .x {
-  opacity: 0.5;
-  transition: all 0.3s;
-  cursor: pointer;
-  display: flex;
-}
-
-header .row .ris .header-ris .head svg path {
-  fill: var(--clr-githup);
-}
-
-header .row .ris .header-ris .head .x:hover {
-  opacity: 1;
-}
-
-header .row .ris input:checked ~ .header-ris {
-  right: 0;
-}
-
-header .row .ris .header-ris .body {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-
-header .row .ris .header-ris .body nav,
-header .row .ris .header-ris .body .bottom-links {
-  display: flex;
-  justify-content: center;
-}
-
-header .row .ris .header-ris .body nav ul {
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-}
-
-header .row .ris .header-ris .body nav ul li {
-  width: 100%;
-}
-
-header .row .ris .header-ris .body nav ul a {
-  width: 100%;
-  border-radius: 0;
-}
-
-header .row .ris .header-ris .body .list-right {
-  margin-top: 25px;
-  padding-top: 24px;
-  flex-direction: column;
-  gap: 24px;
-  border-top: 1px solid #b7b7b7;
-}
-
-header .row .ris .header-ris .body .list-right .list {
-  display: flex;
-  gap: 8px;
-}
-
-header .row .ris .header-ris .body .list-right .list h4 {
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-}
-
-header .row .ris nav {
-  display: flex;
-}
-
-@media (max-width: 700px) {
-  header .row .ris {
-    display: block;
-  }
-
+@media (max-width: 680px) {
   header .row nav {
     display: none;
   }
@@ -397,8 +275,20 @@ header .row .ris nav {
 /* _______________HERO________________ */
 /* #region HERO */
 
+.particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+  position: relative;
+  z-index: -1;
+}
+
 .hero {
-  padding: 170px 15px 140px 15px;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -406,10 +296,25 @@ header .row .ris nav {
   position: relative;
   z-index: 0;
   color: #fff;
+  overflow: hidden;
+}
+
+.hero #particles-js {
+  width: 100%;
 }
 
 .gap-5 {
   gap: 5rem !important;
+}
+
+.hero .rows {
+  padding: 0 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 100%;
+  max-width: 961px;
 }
 
 .hero .card {
@@ -444,48 +349,7 @@ header .row .ris nav {
   );
   z-index: -3;
   border-radius: 18px;
-  animation: 3s spin
-    linear(
-      0 0%,
-      0 2.27%,
-      0.02 4.53%,
-      0.04 6.8%,
-      0.06 9.07%,
-      0.1 11.33%,
-      0.14 13.6%,
-      0.25 18.15%,
-      0.39 22.7%,
-      0.56 27.25%,
-      0.77 31.8%,
-      1 36.35%,
-      0.89 40.9%,
-      0.85 43.18%,
-      0.81 45.45%,
-      0.79 47.72%,
-      0.77 50%,
-      0.75 52.27%,
-      0.75 54.55%,
-      0.75 56.82%,
-      0.77 59.1%,
-      0.79 61.38%,
-      0.81 63.65%,
-      0.85 65.93%,
-      0.89 68.2%,
-      1 72.7%,
-      0.97 74.98%,
-      0.95 77.25%,
-      0.94 79.53%,
-      0.94 81.8%,
-      0.94 84.08%,
-      0.95 86.35%,
-      0.97 88.63%,
-      1 90.9%,
-      0.99 93.18%,
-      0.98 95.45%,
-      0.99 97.73%,
-      1 100%
-    )
-    infinite;
+  animation: 3s spin linear infinite;
 }
 
 .hero .card::before {
@@ -508,6 +372,12 @@ header .row .ris nav {
   from {
     --angle: 0deg;
     --angle: -360deg;
+  }
+}
+
+@media (max-width: 538px) {
+  .hero p br {
+    display: none;
   }
 }
 
@@ -749,12 +619,6 @@ footer .row ul svg path {
 }
 
 /* #endregion FOOTER */
-
-.particles-js-canvas-el {
-  position: fixed;
-  top: 0;
-  z-index: -1;
-}
 
 body:has(.darkmode input[type="checkbox"]:checked) {
   color: #fff;
