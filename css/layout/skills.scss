@@ -1,0 +1,85 @@
+// ________SKILLS_________
+
+.skills {
+  padding: 150px 15px 0 15px;
+  background-color: var(--back-header);
+  position: relative;
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      width: 175px;
+      height: 60px;
+      background-color: transparent;
+      perspective: 1000px;
+
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+
+        .flip-card-front,
+        .flip-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+        }
+
+        .flip-card-front {
+          background: var(--text-white);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--clr-githup);
+          gap: 20px;
+          border-radius: 10px;
+          font-weight: 600;
+
+          svg {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .flip-card-back {
+          background: var(--text-white);
+          overflow: hidden;
+          border-radius: 10px;
+          transform: rotateY(180deg);
+
+          a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            font-weight: 700;
+            color: var(--clr-githup);
+            text-decoration: revert;
+          }
+        }
+      }
+    }
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+  }
+}

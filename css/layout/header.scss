@@ -1,0 +1,186 @@
+// _______HEADER_______
+
+header {
+  width: 100%;
+  padding: 0 15px;
+  position: fixed;
+  top: 16px;
+  z-index: 99;
+
+  .container {
+    border-radius: 15px;
+    background-color: var(--text-white);
+
+    .row {
+      padding: 0 16px;
+      height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .logo {
+        padding: 0;
+
+        svg {
+          width: 80px;
+
+          path {
+            fill: var(--clr-githup);
+          }
+        }
+      }
+
+      nav {
+        width: auto;
+        padding: 0;
+
+        ul {
+          display: flex;
+          align-items: center;
+          gap: 30px;
+
+          a {
+            color: var(--clr-githup);
+            font-weight: 600;
+          }
+        }
+      }
+
+      .nem {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        width: auto;
+        padding: 0;
+        color: var(--text-black);
+
+        .darkmode {
+          display: flex;
+          align-items: center;
+          width: auto;
+          padding: 0;
+
+          input {
+            display: none;
+          }
+
+          label {
+            width: 70px;
+            height: 30px;
+            border-radius: 999px;
+            background: #b4b4b4;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s;
+            box-shadow: 0px 0px 20px #0000009e inset;
+
+            .circle {
+              --circle-width: 26px;
+              position: absolute;
+              width: var(--circle-width);
+              height: 26px;
+              background: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              border-radius: 50%;
+              top: 50%;
+              left: 2px;
+              transform: translateY(-50%);
+              transition: all 0.4s;
+              overflow: hidden;
+
+              svg {
+                width: 20px;
+                position: absolute;
+                transition: all 0.4s;
+              }
+
+              .sun {
+                color: #ffd900;
+                margin-top: -200%;
+              }
+
+              .moon {
+                margin-top: 0%;
+                color: #313131;
+              }
+            }
+          }
+
+          input[type="checkbox"]:checked + label {
+            background: #1f1f1f;
+            box-shadow: 0px 0px 10px 4px #161616 inset;
+
+            .circle {
+              background: #3f3f3f;
+              left: calc(100% - var(--circle-width) - 2px);
+              box-shadow: 0px 0px 4px rgb(0 0 0 / 27%),
+                0px 0px 13px rgb(0 0 0 / 47%) inset;
+
+              .moon {
+                margin-top: 200%;
+              }
+
+              .sun {
+                margin-top: 0%;
+              }
+            }
+          }
+        }
+
+        span {
+          font-size: 25px;
+          font-weight: 200;
+          color: var(--text-black);
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          color: var(--text-black);
+          transition: all 0.3s;
+          font-size: 16px;
+          font-weight: 600;
+          text-decoration: revert;
+
+          .svg {
+            width: 22px;
+            height: 22px;
+            overflow: hidden;
+            position: relative;
+            border-radius: 50%;
+
+            svg {
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              path {
+                fill: var(--text-black);
+                transition: all 0.3s;
+              }
+            }
+          }
+        }
+
+        a:hover {
+          color: var(--text-black);
+
+          .svg svg {
+            left: -22px;
+            transition: all 0.4s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 680px) {
+  header .row nav {
+    display: none;
+  }
+}
