@@ -179,6 +179,18 @@ header {
   }
 }
 
+// @mixin d-flex($align_items, $justify_content, $direction, $wrap) {
+//   display: flex;
+//   align-items: $align_items;
+//   justify-content: $justify_content;
+//   flex-direction: $direction;
+//   flex-wrap: $wrap;
+// }
+
+// a {
+//   @include d-flex(flex, center, row, wrap);
+// }
+
 @media (max-width: 680px) {
   header .row nav {
     display: none;

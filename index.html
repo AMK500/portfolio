@@ -208,11 +208,7 @@
                 HTML5
               </div>
               <div class="flip-card-back">
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
-                  target="_blank"
-                  >Know more</a
-                >
+                <a href="https://html.com/" target="_blank">Know more</a>
               </div>
             </div>
           </li>
@@ -860,7 +856,42 @@
       </div>
     </footer>
 
+    <button id="scrollToTopBtn" title="الرجوع للأعلى">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        height="24px"
+        viewBox="0 -960 960 960"
+        width="24px"
+        fill="#e3e3e3"
+      >
+        <path
+          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+        />
+      </svg>
+    </button>
+
     <!-- #region JS -->
+
+    <script>
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+      // إظهار الزر عند النزول
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 400) {
+          scrollToTopBtn.classList.add("show");
+        } else {
+          scrollToTopBtn.classList.remove("show");
+        }
+      });
+
+      // عند الضغط على الزر يرجع للأعلى
+      scrollToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      });
+    </script>
 
     <script src="./js/bootstrap.bundle.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
