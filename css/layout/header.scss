@@ -1,5 +1,14 @@
 // _______HEADER_______
 
+@mixin d-flex($align_items, $justify_content, $direction, $wrap, $gap) {
+  display: flex;
+  align-items: $align_items;
+  justify-content: $justify_content;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  gap: $gap;
+}
+
 header {
   width: 100%;
   padding: 0 15px;
@@ -14,10 +23,7 @@ header {
     .row {
       padding: 0 16px;
       height: 70px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: nowrap;
+      @include d-flex(center, space-between, row, nowrap, 0);
 
       .logo {
         padding: 0;
@@ -36,9 +42,7 @@ header {
         padding: 0;
 
         ul {
-          display: flex;
-          align-items: center;
-          gap: 30px;
+          @include d-flex(center, center, row, wrap, 30px);
 
           a {
             color: var(--clr-githup);
@@ -178,18 +182,6 @@ header {
     }
   }
 }
-
-// @mixin d-flex($align_items, $justify_content, $direction, $wrap) {
-//   display: flex;
-//   align-items: $align_items;
-//   justify-content: $justify_content;
-//   flex-direction: $direction;
-//   flex-wrap: $wrap;
-// }
-
-// a {
-//   @include d-flex(flex, center, row, wrap);
-// }
 
 @media (max-width: 680px) {
   header .row nav {

@@ -76,8 +76,6 @@ body {
   --logo-header: #000;
 }
 
-// #endregion
-
 body:has(.darkmode input[type="checkbox"]:checked) {
   color: #fff;
   --text-black: #fff;
@@ -93,6 +91,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
 }
+
 #scrollToTopBtn {
   position: fixed;
   bottom: 25px;
@@ -114,17 +113,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background-color: #434343;
+    transform: scale(1.09);
+  }
 }
 
 #scrollToTopBtn.show {
   opacity: 1;
   visibility: visible;
   animation: fadeInUp 0.4s ease;
-}
-
-#scrollToTopBtn:hover {
-  background-color: #434343;
-  transform: scale(1.09);
 }
 
 @keyframes fadeInUp {
@@ -137,3 +136,5 @@ body {
     transform: translateY(0);
   }
 }
+
+// #endregion
