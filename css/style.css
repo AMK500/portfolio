@@ -205,10 +205,12 @@ header .container .row .nem a:hover .svg svg {
   max-width: 350px;
   gap: 30px;
   border-radius: 15px;
+  border-radius: 50%;
 }
 .hero #particles-js .rows .card img {
   width: 100%;
   border-radius: 15px;
+  border-radius: 50%;
 }
 .hero #particles-js .rows .card::after,
 .hero #particles-js .rows .card::before {
@@ -222,6 +224,7 @@ header .container .row .nem a:hover .svg svg {
   background-image: conic-gradient(from var(--angle), transparent 25%, #ff0000);
   z-index: -3;
   border-radius: 18px;
+  border-radius: 50%;
   animation: 4s spin linear infinite;
 }
 .hero #particles-js .rows .card::before {
