@@ -2,6 +2,33 @@
 @import url(https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css);
 @import url(https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap);
 @import url(https://unpkg.com/aos@2.3.1/dist/aos.css);
+:root {
+  --text-black: #000;
+  --text-white: #fff;
+  --svg-menu: #000;
+  --clr-githup: #313131;
+  --card-poro: #fff;
+  --back-header: #e6e3e3;
+  --logo-header: #000;
+}
+
+body:has(.darkmode input[type=checkbox]:checked) {
+  --text-black: #fff;
+  --svg-menu: #fff;
+  --text-white: #313131;
+  --clr-githup: #fff;
+  --card-poro: #4a4a4a;
+  --back-header: #272727;
+  --logo-header: #fff;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  background-color: #0e0e0e;
+  margin: 0;
+}
+
 header {
   width: 100%;
   padding: 0 15px;
@@ -524,34 +551,9 @@ h6 {
 }
 
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Montserrat", sans-serif;
   position: relative;
   background-color: #0e0e0e;
-}
-
-:root {
-  --text-black: #000;
-  --text-white: #fff;
-  --svg-menu: #000;
-  --clr-githup: #313131;
-  --card-poro: #fff;
-  --back-header: #e6e3e3;
-  --logo-header: #000;
-}
-
-body:has(.darkmode input[type=checkbox]:checked) {
-  color: #fff;
-  --text-black: #fff;
-  --svg-menu: #fff;
-  --text-white: #313131;
-  --clr-githup: #fff;
-  --card-poro: #4a4a4a;
-  --back-header: #272727;
-  --logo-header: #fff;
-}
-
-body {
-  font-family: Arial, sans-serif;
   margin: 0;
 }
 
