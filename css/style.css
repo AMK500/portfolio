@@ -66,6 +66,7 @@ header .container .row .nem .darkmode input {
   display: none;
 }
 header .container .row .nem .darkmode label {
+  display: none;
   width: 70px;
   height: 30px;
   border-radius: 999px;
