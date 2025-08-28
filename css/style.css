@@ -24,6 +24,7 @@ header .container .row {
   gap: 0;
 }
 header .container .row .logo {
+  width: 160px;
   padding: 0;
 }
 header .container .row .logo svg {
@@ -47,6 +48,14 @@ header .container .row nav ul {
 header .container .row nav ul a {
   color: var(--clr-githup);
   font-weight: 600;
+}
+@media (max-width: 740px) {
+  header .container .row .logo {
+    width: auto;
+  }
+  header .container .row nav {
+    display: none;
+  }
 }
 header .container .row .nem {
   display: flex;
@@ -158,11 +167,6 @@ header .container .row .nem a:hover .svg svg {
   transition: all 0.4s;
 }
 
-@media (max-width: 680px) {
-  header .row nav {
-    display: none;
-  }
-}
 .hero {
   padding: 130px 20px;
   min-height: 100vh;

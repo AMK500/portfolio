@@ -26,6 +26,7 @@ header {
       @include d-flex(center, space-between, row, nowrap, 0);
 
       .logo {
+        width: 160px;
         padding: 0;
 
         svg {
@@ -48,6 +49,16 @@ header {
             color: var(--clr-githup);
             font-weight: 600;
           }
+        }
+      }
+
+      @media (max-width: 740px) {
+        .logo {
+          width: auto;
+        }
+
+        nav {
+          display: none;
         }
       }
 
@@ -181,11 +192,5 @@ header {
         }
       }
     }
-  }
-}
-
-@media (max-width: 680px) {
-  header .row nav {
-    display: none;
   }
 }
