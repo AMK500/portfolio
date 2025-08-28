@@ -17,13 +17,20 @@
     height: 100%;
     padding-bottom: 40px;
 
+    .swiper-wrapper {
+      display: flex;
+      align-items: stretch !important;
+      height: 100%;
+    }
+
     .swiper-slide {
       background: #4a4a4a;
       background: var(--text-white);
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       overflow: hidden;
+      height: auto;
       border-radius: 15px;
       flex-direction: column;
       position: relative;
@@ -32,7 +39,6 @@
       img {
         display: block;
         width: 100%;
-        height: 100%;
         object-fit: cover;
         transition: all 0.4s;
       }
