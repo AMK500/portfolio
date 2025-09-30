@@ -322,14 +322,18 @@ header .container .row .nem a:hover .svg svg {
   font-weight: 600;
 }
 .skills ul li .flip-card-inner .flip-card-front .note {
+  width: 77px;
   top: 7px;
   left: -22px;
   position: absolute;
   rotate: -44deg;
   background: brown;
-  padding: 2px 20px;
+  padding: 2px;
   font-size: 8px;
   color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .skills ul li .flip-card-inner .flip-card-front svg {
   width: 40px;
