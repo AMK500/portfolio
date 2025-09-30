@@ -311,6 +311,7 @@ header .container .row .nem a:hover .svg svg {
   backface-visibility: hidden;
 }
 .skills ul li .flip-card-inner .flip-card-front {
+  overflow: hidden;
   background: var(--text-white);
   display: flex;
   align-items: center;
@@ -319,6 +320,16 @@ header .container .row .nem a:hover .svg svg {
   gap: 20px;
   border-radius: 10px;
   font-weight: 600;
+}
+.skills ul li .flip-card-inner .flip-card-front .note {
+  top: 7px;
+  left: -22px;
+  position: absolute;
+  rotate: -44deg;
+  background: brown;
+  padding: 2px 20px;
+  font-size: 8px;
+  color: #fff;
 }
 .skills ul li .flip-card-inner .flip-card-front svg {
   width: 40px;

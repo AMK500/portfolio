@@ -44,6 +44,7 @@
         }
 
         .flip-card-front {
+          overflow: hidden;
           background: var(--text-white);
           display: flex;
           align-items: center;
@@ -52,6 +53,17 @@
           gap: 20px;
           border-radius: 10px;
           font-weight: 600;
+
+          .note {
+            top: 7px;
+            left: -22px;
+            position: absolute;
+            rotate: -44deg;
+            background: brown;
+            padding: 2px 20px;
+            font-size: 8px;
+            color: #fff;
+          }
 
           svg {
             width: 40px;
